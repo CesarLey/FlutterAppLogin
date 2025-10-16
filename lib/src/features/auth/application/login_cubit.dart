@@ -31,11 +31,17 @@ class LoginCubit extends Cubit<LoginState> {
     // Simula una llamada a API/backend con delay de 2 segundos
     await Future.delayed(const Duration(seconds: 2));
 
-    // Desafío 2: Validación de credenciales específicas
-    const validEmail = 'test@example.com';
-    const validPassword = 'SecretPass';
+    // Desafío 2: Validación de credenciales específicas (múltiples usuarios)
+    // Mapa de usuarios válidos: email -> password
+    const validUsers = {
+      'test@example.com': 'SecretPass',
+      'cesarley817@gmail.com': '123456',
+      'admin@example.com': 'admin123',
+      'user@demo.com': 'demo2024',
+    };
 
-    if (email == validEmail && password == validPassword) {
+    // Verifica si el email existe y la contraseña coincide
+    if (validUsers.containsKey(email) && validUsers[email] == password) {
       emit(LoginSuccess(
         isRememberMeChecked: state.isRememberMeChecked,
         message: 'Welcome, $email!',
