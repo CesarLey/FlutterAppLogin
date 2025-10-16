@@ -92,7 +92,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
           );
           
-          // Desafío 2: Navegación a HomeScreen (placeholder por ahora - TODO)
+          // Desafío 2: Navegación a HomeScreen (placeholder por ahora)
           // Navigator.push(context, MaterialPageRoute(builder: (_) => HomeScreen()));
           
         } else if (state is LoginFailure) {

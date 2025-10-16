@@ -62,7 +62,7 @@ class AppTheme {
       visualDensity: VisualDensity.adaptivePlatformDensity,
       
       appBarTheme: AppBarTheme(
-        backgroundColor: primaryColor.withOpacity(0.9),
+        backgroundColor: primaryColor.withValues(alpha: 0.9),
         foregroundColor: Colors.white,
         centerTitle: true,
         elevation: 2,
