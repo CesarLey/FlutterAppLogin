@@ -141,7 +141,7 @@ class _LoginFormState extends State<LoginForm> {
                 height: logoSize,
                 width: logoSize,
                 child: Image.asset(
-                  'assets/images/logo_app.png',
+                  'assets/images/login_logo.png',
                   // Si el asset falta, mostramos un fallback amigable
                   errorBuilder: (context, error, stackTrace) => Container(
                     alignment: Alignment.center,
